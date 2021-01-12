@@ -180,3 +180,54 @@ const stagesMySwiper = new Swiper('.stages-swiper-container', {
       prevEl: '.stages-btn-prev',
     },
 });
+
+$('.stages__steps').on('click', '.stages-box', function() {
+    const index = $(this).data('index');
+    stagesMySwiper.slideTo(index);
+});
+
+const slideStagesItem = document.querySelectorAll('.stages-box');
+
+stagesMySwiper.on('slideChange', () => {
+    let currIndexSlide = stagesMySwiper.realIndex;
+
+    switch(currIndexSlide) {
+        case 0:
+            slideStagesItem[0].classList.add('stages-box__active');
+            slideStagesItem[1].classList.remove('stages-box__active');
+            slideStagesItem[2].classList.remove('stages-box__active');
+            slideStagesItem[3].classList.remove('stages-box__active');
+            slideStagesItem[4].classList.remove('stages-box__active');
+        break;
+        case 1:
+            slideStagesItem[1].classList.add('stages-box__active');
+            slideStagesItem[0].classList.remove('stages-box__active');
+            slideStagesItem[2].classList.remove('stages-box__active');
+            slideStagesItem[3].classList.remove('stages-box__active');
+            slideStagesItem[4].classList.remove('stages-box__active');
+        break;
+        case 2:
+            slideStagesItem[2].classList.add('stages-box__active');
+            slideStagesItem[0].classList.remove('stages-box__active');
+            slideStagesItem[1].classList.remove('stages-box__active');
+            slideStagesItem[3].classList.remove('stages-box__active');
+            slideStagesItem[4].classList.remove('stages-box__active');
+        break;
+        case 3:
+            slideStagesItem[3].classList.add('stages-box__active');
+            slideStagesItem[0].classList.remove('stages-box__active');
+            slideStagesItem[1].classList.remove('stages-box__active');
+            slideStagesItem[2].classList.remove('stages-box__active');
+            slideStagesItem[4].classList.remove('stages-box__active');
+        break;
+        case 4:
+            slideStagesItem[4].classList.add('stages-box__active');
+            slideStagesItem[0].classList.remove('stages-box__active');
+            slideStagesItem[1].classList.remove('stages-box__active');
+            slideStagesItem[2].classList.remove('stages-box__active');
+            slideStagesItem[3].classList.remove('stages-box__active');
+        break;
+        default:
+            console.log('slideChange');
+    }
+});

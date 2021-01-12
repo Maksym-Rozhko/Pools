@@ -162,7 +162,8 @@ body {
 }
 
 .form__btn,
-.modal-btn {
+.modal-btn,
+.stages-container__btn {
     background-color: #fbba2f;
     font-size: 15px;
     line-height: 44px;
@@ -176,7 +177,8 @@ body {
     transition-duration: .4s;
 }
 
-.form__btn:hover {
+.form__btn:hover,
+.stages-container__btn:hover {
     background-color: #fccb61;
     color: #fff;
 }
@@ -498,19 +500,22 @@ body {
     font-weight: 400;
 }
 
-.cost-expert__lists {
+.cost-expert__lists,
+.stages__lists {
     list-style: none;
     margin-top: 30px;
 }
 
-.cost-expert__text {
+.cost-expert__text,
+.stages__text-list {
     font-size: 18px;
     font-weight: 400;
     position: relative;
     margin-bottom: 20px;
 }
 
-.cost-expert__text::before {
+.cost-expert__text::before,
+.stages__text-list::before {
     content: "";
     background-color: transparent;
     position: absolute;
@@ -601,6 +606,12 @@ body {
     position: relative;
     cursor: pointer;
     background: #f7f7f7;
+    transition-duration: .5s;
+}
+
+.stages-box:hover {
+    background: #fff;
+    border: 1px solid #fbba2f;
 }
 
 .stages-box__active {
@@ -616,6 +627,7 @@ body {
     height: 20px;
     right: -60px;
     top: 50%;
+    transition-duration: .5s;
 }
 
 .stages-box__active::before {
@@ -638,6 +650,7 @@ body {
     top: 50%;
     right: -64px;
     transform: rotate(-45deg) translateY(-7px);
+    transition-duration: .5s;
 }
 
 .stages-box__active::after {
@@ -808,7 +821,7 @@ body {
     left: 90px;
 }
 
-.stages-btn-right {
+.stages-btn-next {
     right: 90px;
 }
   

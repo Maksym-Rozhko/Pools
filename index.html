@@ -406,7 +406,7 @@
                 от проекта до его сдачи в эксплуатацию:
             </p>
             <div class="stages__steps">
-                <div class="stages-box stages-box__active">
+                <div class="stages-box stages-box__active" data-index="0">
                     <span class="stages-box__text">
                         Проектирование
                     </span>
@@ -414,7 +414,7 @@
                         5-10 дней
                     </span>
                 </div>
-                <div class="stages-box">
+                <div class="stages-box" data-index="1">
                     <span class="stages-box__text">
                         Изготовление чаши
                     </span>
@@ -422,7 +422,7 @@
                         14-21 дней
                     </span>
                 </div>
-                <div class="stages-box">
+                <div class="stages-box" data-index="2">
                     <span class="stages-box__text">
                         Отделочные работы
                     </span>
@@ -430,7 +430,7 @@
                         от 10 дней
                     </span>
                 </div>
-                <div class="stages-box">
+                <div class="stages-box" data-index="3">
                     <span class="stages-box__text">
                         Монтаж оборудования
                     </span>
@@ -438,7 +438,7 @@
                         от 5 дней
                     </span>
                 </div>
-                <div class="stages-box">
+                <div class="stages-box" data-index="4">
                     <span class="stages-box__text">
                         Сдача в эксплуатацию
                     </span>
@@ -459,14 +459,14 @@
                             <h3 class="stages-container__title">
                                 Проектируем ваш бассейн
                             </h3>
-                            <ul class="cost-expert__lists">
-                                <li class="cost-expert__text">
+                            <ul class="stages__lists">
+                                <li class="stages__text-list">
                                     Помогаем определиться с концепцией бетонного бассейна
                                 </li>
-                                <li class="cost-expert__text">
+                                <li class="stages__text-list">
                                     Визуализируем бассейн в 3D или 2D
                                 </li>
-                                <li class="cost-expert__text">
+                                <li class="stages__text-list">
                                     Проектируем ( 
                                         <span class="stages-container__abbr">
                                             кж
@@ -497,15 +497,15 @@
                                         </span>
                                     )
                                 </li>
-                                <li class="cost-expert__text">
+                                <li class="stages__text-list">
                                     Формируем смету на строительство
                                 </li>
                             </ul>
                             <div class="stages-container__buttons">
-                                <button class="stages-container__btn form__btn">
+                                <button class="stages-container__btn">
                                     Детальнее
                                 </button>
-                                <button class="stages-container__btn form__btn">
+                                <button class="stages-container__btn">
                                     Рассчитать проект
                                 </button>
                             </div>
@@ -521,25 +521,25 @@
                             <h3 class="stages-container__title">
                                 Изготавливаем бетонную чашу
                             </h3>
-                            <ul class="cost-expert__lists">
-                                <li class="cost-expert__text">
+                            <ul class="stages__lists">
+                                <li class="stages__text-list">
                                     Разработка котлована
                                 </li>
-                                <li class="cost-expert__text">
+                                <li class="stages__text-list">
                                     Устройство опалубки и вязка арматуры
                                 </li>
-                                <li class="cost-expert__text">
+                                <li class="stages__text-list">
                                     Бетонирование чаши
                                 </li>
-                                <li class="cost-expert__text">
+                                <li class="stages__text-list">
                                     Демонтаж опалубки
                                 </li>
                             </ul>
                             <div class="stages-container__buttons">
-                                <button class="stages-container__btn form__btn">
+                                <button class="stages-container__btn">
                                     Детальнее
                                 </button>
-                                <button class="stages-container__btn form__btn">
+                                <button class="stages-container__btn">
                                     Рассчитать проект
                                 </button>
                             </div>
@@ -555,28 +555,28 @@
                             <h3 class="stages-container__title">
                                 Производим отделочные работы
                             </h3>
-                            <ul class="cost-expert__lists">
-                                <li class="cost-expert__text">
+                            <ul class="stages__lists ">
+                                <li class="stages__text-list">
                                     Штукатурные работы
                                 </li>
-                                <li class="cost-expert__text">
+                                <li class="stages__text-list">
                                     Гидроизоляция чаши бассейна
                                 </li>
-                                <li class="cost-expert__text">
+                                <li class="stages__text-list">
                                     Проведение гидроиспытания чаши бассейна
                                 </li>
-                                <li class="cost-expert__text">
+                                <li class="stages__text-list">
                                     Облицовка чаши бассейна
                                 </li>
-                                <li class="cost-expert__text">
+                                <li class="stages__text-list">
                                     Установка лицевых элементов
                                 </li>
                             </ul>
                             <div class="stages-container__buttons">
-                                <button class="stages-container__btn form__btn">
+                                <button class="stages-container__btn">
                                     Детальнее
                                 </button>
-                                <button class="stages-container__btn form__btn">
+                                <button class="stages-container__btn">
                                     Рассчитать проект
                                 </button>
                             </div>
@@ -590,36 +590,57 @@
                             <span class="stages-container__fractions stages-container__fractions--current">04</span>
                             <span class="stages-container__fractions">/05</span>
                             <h3 class="stages-container__title">
-                                Производим отделочные работы
+                                Выполняем монтаж оборудования
                             </h3>
-                            <ul class="cost-expert__lists">
-                                <li class="cost-expert__text">
-                                    Штукатурные работы
+                            <ul class="stages__lists">
+                                <li class="stages__text-list">
+                                    Монтаж технического оборудования
                                 </li>
-                                <li class="cost-expert__text">
-                                    Гидроизоляция чаши бассейна
-                                </li>
-                                <li class="cost-expert__text">
-                                    Проведение гидроиспытания чаши бассейна
-                                </li>
-                                <li class="cost-expert__text">
-                                    Облицовка чаши бассейна
-                                </li>
-                                <li class="cost-expert__text">
-                                    Установка лицевых элементов
+                                <li class="stages__text-list">
+                                    Проводим пуско-наладочные работы
                                 </li>
                             </ul>
                             <div class="stages-container__buttons">
-                                <button class="stages-container__btn form__btn">
+                                <button class="stages-container__btn">
                                     Детальнее
                                 </button>
-                                <button class="stages-container__btn form__btn">
+                                <button class="stages-container__btn">
                                     Рассчитать проект
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide stages-container">Slide 5</div>
+                    <div class="swiper-slide stages-container">
+                        <div class="stages-container__box">
+                            <img src="./assets/images/stages/stages_5.jpg" alt="stages_img">
+                        </div>
+                        <div class="stages-container__content">
+                            <span class="stages-container__fractions stages-container__fractions--current">05</span>
+                            <span class="stages-container__fractions">/05</span>
+                            <h3 class="stages-container__title">
+                                Сдаем бассейн в эксплуатацию
+                            </h3>
+                            <ul class="stages__lists">
+                                <li class="stages__text-list">
+                                    Подписываем акт выполненных работ
+                                </li>
+                                <li class="stages__text-list">
+                                    Учим пользоваться оборудованием
+                                </li>
+                                <li class="stages__text-list">
+                                    Подписываем гарантийные документы и инструкции
+                                </li>
+                            </ul>
+                            <div class="stages-container__buttons">
+                                <button class="stages-container__btn">
+                                    Детальнее
+                                </button>
+                                <button class="stages-container__btn">
+                                    Рассчитать проект
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="swiper-button-prev stages-btn-prev"></div>
