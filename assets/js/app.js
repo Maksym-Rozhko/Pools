@@ -168,3 +168,15 @@ window.addEventListener('click', (e) => {
         document.querySelector('body').style.overflow = 'visible';
     }
 });
+
+// Stages 
+const stagesMySwiper = new Swiper('.stages-swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.stages-btn-next',
+      prevEl: '.stages-btn-prev',
+    },
+});
