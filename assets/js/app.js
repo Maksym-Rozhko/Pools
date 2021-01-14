@@ -55,6 +55,7 @@ const iterAllBtns = (allBtns) => {
                 'success'
             );
             modal.style.display = "none";
+            stagesModalConteiner.style.display = 'none';
             document.querySelector('body').style.overflow = 'visible';
         });
     }
@@ -139,19 +140,23 @@ gallerySwiperBottom.controller.control = gallerySwiper;
 
 const modalCont = document.querySelector(".modal__box");
 const modal = document.getElementById("galleryModal");
-const modalBtnClose = document.getElementsByClassName("modal__close")[0];
+const modalBtnClose = document.querySelectorAll(".modal__close");
 const swiperSlidePool = document.querySelectorAll('.swiper-slide-pool');
+const stagesModalConteiner = document.querySelector('#stagesModal');
+const openModalDetailBtns = document.querySelectorAll('.stages-container__btn');
 
 const getSrcImages = (e) => {
     let target = e.target;
     let imgSrc = target.src;
     modalCont.children[0].children[0].setAttribute('src', imgSrc);
 }
-
-modalBtnClose.addEventListener('click', () => {
-    modal.style.display = "none";
-    document.querySelector('body').style.overflow = 'visible';
-});
+for (btn of modalBtnClose) {
+    btn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        stagesModalConteiner.style.display = 'none';
+        document.querySelector('body').style.overflow = 'visible';
+    });
+}
 
 for (item of swiperSlidePool) {
     item.addEventListener('click', e => {
@@ -162,9 +167,18 @@ for (item of swiperSlidePool) {
     });
 }
 
+for (detailBtn of openModalDetailBtns) {
+    detailBtn.addEventListener('click', e => {
+        e.preventDefault();
+        stagesModalConteiner.style.display = "block";
+        document.querySelector('body').style.overflow = 'hidden';
+    });
+}
+
 window.addEventListener('click', (e) => {
-    if (e.target === modal) {
+    if (e.target === modal || e.target === stagesModalConteiner) {
         modal.style.display = "none";
+        stagesModalConteiner.style.display = 'none';
         document.querySelector('body').style.overflow = 'visible';
     }
 });

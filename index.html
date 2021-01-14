@@ -72,7 +72,7 @@
                                     <p class="form__text">
                                         Узнайте стоимость вашего бетонного бассейна
                                     </p>
-                                    <input placeholder="+38 (000) 000-00-00" type="text" class="form__input" required>
+                                    <input placeholder="+38 (000) 000-00-00" type="text" class="form__input">
                                     <button type="submit" class="form__btn">
                                         Узнать стоимость
                                     </button>
@@ -405,6 +405,41 @@
             <p class="stages__text">
                 от проекта до его сдачи в эксплуатацию:
             </p>
+            <div id="stagesModal" class="modal">
+                <div class="modal__wrapper">
+                    <span class="modal__close" onclick="">×</span>
+                    <div class="modal__box">
+                        <div class="modal__box-text">
+                            <h3 class="modal__title">
+                                закажите профессиональное проектирование бассейна
+                            </h3>
+                            <p class="modal__text">
+                                получите готовый проект за 14 дней, с точной сметой — без переплат!
+                            </p>
+                        </div>
+                        <ul class="stages__lists">
+                            <li class="stages__text-list">
+                                22 года на рынке
+                            </li>
+                            <li class="stages__text-list">
+                                Персональные менеджеры эксперты с опытом более 10 лет
+                            </li>
+                            <li class="stages__text-list">
+                                Подготовили более 500 проектов бетонных бассейнов
+                            </li>
+                        </ul>
+                        <form action="#" class="modal__form form">
+                            <h3 class="form__text">
+                                ПОЛУЧИТЕ ЛУЧШУЮ ЦЕНУ
+                            </h3>
+                            <input placeholder="+38 (000) 000-00-00" type="text" class="form__input">
+                            <button type="submit" class="form__btn">
+                                Получить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div class="stages__steps">
                 <div class="stages-box stages-box__active" data-index="0">
                     <span class="stages-box__text">
@@ -484,13 +519,13 @@
                                         ,
                                         <span class="stages-container__abbr">
                                             эс
-                                            <span class="stages-container__abbr stages-container__abbr--hover">
+                                            <span class="stages-container__abbr stages__abbr stages-container__abbr--hover">
                                                 Электроснабжение
                                             </span>
                                         </span>
                                         ,
                                         <span class="stages-container__abbr">
-                                            ас
+                                            аo
                                             <span class="stages-container__abbr stages-container__abbr--hover">
                                                 Автоматизация оборудования
                                             </span>
