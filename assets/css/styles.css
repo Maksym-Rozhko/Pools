@@ -889,6 +889,87 @@ body {
     margin-bottom: 32px;
 }
 
+.consultation {
+    background-color: #f7f7f7;
+}
+
+.consultation .cost-form::after {
+    border-right: 35px solid #f7f7f7;
+}
+
+.consultation .cost-expert {
+    align-items: center;
+    margin-bottom: 35px;
+    opacity: .5;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.consultation .cost-expert__active {
+    opacity: 1;
+}
+
+.consultation .cost-expert:last-child {
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.consultation .cost-expert__avatar {
+    width: 83px;
+    height: 83px;
+    border: 1px solid #fbba2f;
+    padding: 3px;
+    display: block;
+}
+
+.consultation .cost-expert__info {
+    max-width: 200px;
+}
+
+.consultation .cost-title {
+    max-width: 500px;
+    margin-bottom: 60px;
+}
+
+.consultation .cost-content {
+    justify-content: inherit;
+}
+
+.consultation .consultation__experts {
+    flex-grow: 2;
+}
+
+.consultation .cost-form {
+    flex-grow: 4;
+    flex-direction: column;
+}
+
+.consultation .form__avatar {
+    width: 240px;
+    height: 270px;
+    display: none;
+}
+
+.consultation .form__person-name {
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.consultation .form__position {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.consultation .form__body {
+    margin-top: 45px;
+    max-width: 430px;
+}
+
 @media (max-width: 1450px) {
     .swiper-slide__title {
         font-size: 32px;
