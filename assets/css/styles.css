@@ -920,6 +920,7 @@ body {
     border: 1px solid #fbba2f;
     padding: 3px;
     display: block;
+    object-fit: cover;
 }
 
 .consultation .cost-expert__info {
@@ -936,22 +937,34 @@ body {
 }
 
 .consultation .consultation__experts {
-    flex-grow: 2;
+    margin-right: 80px;
+}
+
+.consultation__forms-block {
+    flex-grow: 1;
 }
 
 .consultation .cost-form {
-    flex-grow: 4;
+    max-width: 520px;
     flex-direction: column;
+}
+
+.consultation .form__avatar-box {
+    position: absolute;
+    top: -21%;
+    right: -16%;
 }
 
 .consultation .form__avatar {
     width: 240px;
     height: 270px;
-    display: none;
+    display: block;
+    object-fit: cover;
 }
 
 .consultation .form__person-name {
     text-transform: uppercase;
+    max-width: 230px;
     font-size: 22px;
     margin-bottom: 0;
     font-weight: 600;
@@ -968,7 +981,79 @@ body {
 .consultation .form__body {
     margin-top: 45px;
     max-width: 430px;
+    display: flex;
+    margin-bottom: 25px;
 }
+
+.consultation .form__age-box {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.consultation .form__age:first-child {
+    font-size: 65px;
+    line-height: 60px;
+    font-weight: 400;
+}
+
+.consultation .form__age:last-child {
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.consultation .form__text {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 600;
+    max-width: 200px;
+    margin-bottom: 0;
+}
+
+.consultation .form__action {
+    display: flex;
+    align-items: center;
+}
+
+.consultation .form__input {
+    background-color: #fff;
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+.consultation #consultation-2::before {
+    top: 150px;
+}
+
+.consultation #consultation-2:after {
+    top: 145px;
+}
+
+.consultation #consultation-3::before {
+    top: 300px;
+}
+
+.consultation #consultation-3:after {
+    top: 295px;
+}
+
+.consultation .cost-form {
+    display: none;
+}
+
+.consultation .cost-form--active {
+    display: block;
+}
+
+
+/* #consultation-1,
+#consultation-2,
+#consultation-3 {
+    display: none;
+} */
 
 @media (max-width: 1450px) {
     .swiper-slide__title {
@@ -1041,16 +1126,6 @@ body {
     }
 }
 
-@media (max-width: 1085px) {
-    .stages-box::before, .stages-box__active::before {
-        content: none;
-    }
-
-    .stages-box::after, .stages-box__active::after {
-        content: none;
-    }
-}
-
 @media (max-width: 1110px) {
     .container {
         display: none;
@@ -1059,6 +1134,24 @@ body {
     .swiper-button-prev,
     .swiper-button-next {
         display: none;
+    }
+}
+
+@media (max-width: 1085px) {
+    .stages-box::before, .stages-box__active::before {
+        content: none;
+    }
+
+    .stages-box::after, .stages-box__active::after {
+        content: none;
+    }
+
+    .consultation .consultation__experts {
+        margin-right: 20px;
+    }
+
+    .consultation .cost-form {
+        max-width: 500px;
     }
 }
 
@@ -1074,6 +1167,49 @@ body {
     .stages-box::after, .stages-box__active::after {
         content: "";
         right: -35px;
+    }
+
+    .consultation .cost-form {
+        max-width: 480px;
+    }
+
+    .consultation .form__avatar-box {
+        right: -15px;
+    }
+
+    .consultation .form__avatar {
+        width: 180px;
+        height: 200px;
+    }
+
+    .consultation .form__person-name {
+        font-size: 18px;
+    }
+
+    .consultation .form__position {
+        font-size: 14px;
+    }
+
+    .consultation .form__age:first-child {
+        font-size: 45px;
+    }
+
+    .consultation .form__age:last-child {
+        font-size: 14px;
+    }
+
+    .consultation .form__text {
+        max-width: 260px;
+    }
+
+    .consultation .form__action {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .consultation .form__input {
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 }
 
@@ -1096,6 +1232,32 @@ body {
 @media (max-width: 831px) {
     .stages .modal__close {
         top: -10px;
+    }
+
+    .consultation .cost-expert__avatar {
+        margin-right: 10px;
+    }
+    
+    .consultation .cost-expert__info {
+        max-width: 190px;
+    }
+
+    .cost-expert__name {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .cost-expert__rank {
+        font-size: 14px;
+    }
+
+    .consultation .cost-form {
+        padding: 30px 15px;
+    }
+
+    .consultation .form__avatar {
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -1160,6 +1322,38 @@ body {
     .stages .swiper-button-next {
         display: block;
     }
+
+    .consultation .cost-content {
+        flex-direction: row;
+    }
+
+    .consultation .cost-form::after,
+    .consultation .cost-form::before {
+        content: "" ;
+    }
+
+    .consultation .form__avatar-box {
+        display: none;
+    }
+
+    .consultation .form__person-name {
+        margin-top: 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .consultation .form__body {
+        margin-top: 25px;
+    }
+
+    .consultation .form__age:first-child {
+        font-size: 50px;
+    }
+    
+    .cost-form .form__text {
+        font-size: 14px;
+        line-height: 18px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1183,6 +1377,14 @@ body {
     .stages__text-list {
         font-size: 16px;
         line-height: 18px;
+    }
+
+    .consultation #consultation-3::before {
+        top: 250px;
+    }
+
+    .consultation #consultation-3::after {
+        top: 245px;
     }
 }
 
@@ -1267,11 +1469,154 @@ body {
     .stages .swiper-button-next {
         right: 415px;
     }
+
+    .consultation .cost-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .consultation .cost-content {
+        flex-direction: column;
+    }
+
+    .consultation .consultation__experts {
+        display: flex;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .consultation .cost-expert__avatar {
+        width: 100%;
+    }
+
+    .consultation .cost-expert {
+        margin-bottom: 0;
+        flex-direction: column;
+        flex: inherit;
+        margin-right: 20px;
+    }
+
+    .consultation .cost-expert:last-child {
+        margin-right: 0;
+    }
+
+    .consultation .cost-expert__info {
+        margin-right: auto;
+        margin-top: 10px;
+    }
+
+    .cost-expert__name {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .cost-expert__rank {
+        font-size: 14px;
+    }
+
+    .consultation__forms-block {
+        width: 100%;
+    }
+
+    .consultation .cost-form {
+        width: 100%;
+        max-width: 580px;
+    }
+
+    .consultation .cost-form::after, 
+    .consultation .cost-form::before,
+    .consultation #consultation-2::after, 
+    .consultation #consultation-2::before,
+    .consultation #consultation-3::after, 
+    .consultation #consultation-3::before  {
+        transform: rotate(90deg);
+        top: -62px;
+    }
+    
+    .consultation .cost-form::before {
+        left: 15px
+    }
+
+    .consultation .cost-form::after {
+        left: 11px;
+    }
+    
+    .consultation #consultation-2::before {
+        left: 215px
+    }
+
+    .consultation #consultation-2::after {
+        left: 211px;
+    }
+
+    .consultation #consultation-3::before {
+        left: 400px
+    }
+
+    .consultation #consultation-3::after {
+        left: 395px;
+    }
+    
+    .consultation .form__avatar-box {
+        display: block;
+        top: 15px;
+        right: 15px;
+    }
+
+    .consultation .form__person-name {
+        margin-top: 0;
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: auto;
+    }
+
+    .consultation .form__position {
+        font-size: 16px;
+    }
+
+    .consultation .form__body {
+        margin-right: auto;
+    }
+
+    .consultation .form__action {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .consultation .form__input {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
 }
 
 @media (max-width: 560px) {
     .stages .swiper-button-next {
         right: 390px;
+    }
+
+    .consultation .cost-expert__name {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: bold;
+    }
+
+    .consultation .cost-expert__rank {
+        font-size: 12px;
+    }
+
+    .consultation .form__avatar {
+        width: 150px;
+        height: 100px;
+    }
+
+    .consultation .form__person-name {
+        margin-top: 10px;
+    }
+    
+    .consultation .form__body {
+        margin-top: 45px;
     }
 }
 
@@ -1286,6 +1631,22 @@ body {
 
     .stages__lists {
         padding-left: 30px;
+    }
+
+    .consultation #consultation-2::before {
+        left: 175px
+    }
+
+    .consultation #consultation-2::after {
+        left: 170px;
+    }
+
+    .consultation #consultation-3::before {
+        left: 320px
+    }
+
+    .consultation #consultation-3::after {
+        left: 315px;
     }
 }
 
@@ -1361,6 +1722,20 @@ body {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .consultation .form__action {
+        flex-direction: column;
+    }
+
+    .consultation .form__input,
+    .cost-form .form__btn {
+        max-width: 100%;
+    }
+
+    .consultation .form__input {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1390,6 +1765,31 @@ body {
     .stages-container__btn:first-child {
         margin-right: 0;
         margin-bottom: 20px;
+    }
+
+    .consultation .form__person-name {
+        font-size: 16px;
+        max-width: 175px;
+    }
+
+    .consultation .form__position {
+        font-size: 12px;
+    }
+
+    .consultation #consultation-2::before {
+        left: 130px
+    }
+
+    .consultation #consultation-2::after {
+        left: 126px;
+    }
+
+    .consultation #consultation-3::before {
+        left: 275px
+    }
+
+    .consultation #consultation-3::after {
+        left: 270px;
     }
 }
 
@@ -1440,6 +1840,34 @@ body {
     .stages .swiper-button-next {
         right: 15px;
     }
+
+    .consultation .form__avatar {
+        width: 100px;
+    }
+
+    .consultation .form__person-name {
+        font-size: 14px;
+    }
+
+    .consultation .form__position {
+        font-size: 12px;
+    }
+
+    .consultation #consultation-2::before {
+        left: 110px
+    }
+
+    .consultation #consultation-2::after {
+        left: 106px;
+    }
+
+    .consultation #consultation-3::before {
+        left: 235px
+    }
+
+    .consultation #consultation-3::after {
+        left: 230px;
+    }
 }
 
 @media (max-width: 350px) {
@@ -1463,6 +1891,22 @@ body {
 @media (max-width: 345px) {
     .stages .modal__close {
         top: -30px;
+    }
+
+    .consultation #consultation-2::before {
+        left: 110px
+    }
+
+    .consultation #consultation-2::after {
+        left: 106px;
+    }
+
+    .consultation #consultation-3::before {
+        left: 200px
+    }
+
+    .consultation #consultation-3::after {
+        left: 195px;
     }
 }
 

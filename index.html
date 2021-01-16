@@ -692,7 +692,7 @@
             </h2>
             <div class="cost-content">
                 <div class="consultation__experts">
-                    <div class="cost-expert cost-expert__active">
+                    <div data-consultation="consultation-1" class="cost-expert cost-expert__active">
                         <img src="./assets/images/consultation/owner.jpg" alt="Игорь Пикалов" class="cost-expert__avatar">
                         <div class="cost-expert__info">
                             <h4 class="cost-expert__name">
@@ -703,7 +703,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="cost-expert">
+                    <div data-consultation="consultation-2" class="cost-expert">
                         <img src="./assets/images/consultation/leader.jpg" alt="Андрей Кравченко" class="cost-expert__avatar">
                         <div class="cost-expert__info">
                             <h4 class="cost-expert__name">
@@ -714,7 +714,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="cost-expert">
+                    <div data-consultation="consultation-3" class="cost-expert">
                         <img src="./assets/images/consultation/Foreman.jpg" alt="Николай Шевченко" class="cost-expert__avatar">
                         <div class="cost-expert__info">
                             <h4 class="cost-expert__name">
@@ -726,34 +726,101 @@
                         </div>
                     </div>
                 </div>
-                <form action="#" class="form cost-form">
-                    <div class="form__avatar-box">
-                        <img src="./assets/images/consultation/owner.jpg" alt="Игорь Пикалов" class="form__avatar">
-                    </div>
-                    <p class="form__person-name">
-                        Игорь Пикалов
-                        <span class="form__position">
-                            Собственник
-                        </span>
-                    </p>
-                    <div class="form__body">
-                        <div class="form__age-box">
-                            <span class="form__age">
-                                52
-                            </span>
-                            <span class="form__age">
-                                года
-                            </span>
+                <div class="consultation__forms-block">
+                    <form id="consultation-1" action="#" class="form cost-form cost-form--active">
+                        <div class="form__avatar-box">
+                            <img src="./assets/images/consultation/owner.jpg" alt="Игорь Пикалов" class="form__avatar">
                         </div>
-                        <p class="form__text">
-                            опыта работы в строительстве бассейнов, разработал и внедрил особую методику «без холодных швов»
+                        <p class="form__person-name">
+                            Игорь Пикалов
+                            <span class="form__position">
+                                Собственник
+                            </span>
                         </p>
-                    </div>
-                    <input placeholder="+38 (093) 333-33-33" type="text" class="form__input" required>
-                    <button type="submit" class="form__btn">
-                        Узнать стоимость
-                    </button>
-                </form>
+                        <div class="form__body">
+                            <div class="form__age-box">
+                                <span class="form__age">
+                                    22
+                                </span>
+                                <span class="form__age">
+                                    года
+                                </span>
+                            </div>
+                            <p class="form__text">
+                                опыта работы в строительстве бассейнов, разработал и внедрил особую методику «без холодных швов»
+                            </p>
+                        </div>
+                        <div class="form__action">
+                            <input placeholder="+38 (093) 333-33-33" type="text" class="form__input" required>
+                            <button type="submit" class="form__btn">
+                                Получить консультацию
+                            </button>
+                        </div>
+                    </form>
+                    <form id="consultation-2" action="#" class="form cost-form">
+                        <div class="form__avatar-box">
+                            <img src="./assets/images/consultation/leader.jpg" alt="Андрей Кравченко" class="form__avatar">
+                        </div>
+                        <p class="form__person-name">
+                            Андрей Кравченко
+                            <span class="form__position">
+                                Руководитель проектов строительства бассейнов
+                            </span>
+                        </p>
+                        <div class="form__body">
+                            <div class="form__age-box">
+                                <span class="form__age">
+                                    8
+                                </span>
+                                <span class="form__age">
+                                    года
+                                </span>
+                            </div>
+                            <p class="form__text">
+                                опыта работы в проектировании и строительстве бассейнов. 
+                                Может создать бассейн любой формы
+                            </p>
+                        </div>
+                        <div class="form__action">
+                            <input placeholder="+38 (093) 333-33-33" type="text" class="form__input" required>
+                            <button type="submit" class="form__btn">
+                                Получить консультацию
+                            </button>
+                        </div>
+                    </form>
+                    <form id="consultation-3" action="#" class="form cost-form">
+                        <div class="form__avatar-box">
+                            <img src="./assets/images/consultation/Foreman.jpg" alt="НИКОЛАЙ ШЕВЧЕНКО" class="form__avatar">
+                        </div>
+                        <p class="form__person-name">
+                            Николай Шевченко
+                            <span class="form__position">
+                                Прораб
+                            </span>
+                        </p>
+                        <div class="form__body">
+                            <div class="form__age-box">
+                                <span class="form__age">
+                                    15
+                                </span>
+                                <span class="form__age">
+                                    года
+                                </span>
+                            </div>
+                            <p class="form__text">
+                                опыта ведения строительных и отделочных работ. 
+                                То что для других «сложное архитектурное решение» 
+                                для него — в порядке вещей.
+                            </p>
+                        </div>
+                        <div class="form__action">
+                            <input placeholder="+38 (093) 333-33-33" type="text" class="form__input" required>
+                            <button type="submit" class="form__btn">
+                                Получить консультацию
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

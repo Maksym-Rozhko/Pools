@@ -150,6 +150,7 @@ const getSrcImages = (e) => {
     let imgSrc = target.src;
     modalCont.children[0].children[0].setAttribute('src', imgSrc);
 }
+
 for (btn of modalBtnClose) {
     btn.addEventListener('click', () => {
         modal.style.display = 'none';
@@ -244,4 +245,17 @@ stagesMySwiper.on('slideChange', () => {
         default:
             console.log('slideChange');
     }
+});
+
+// Consultation
+
+const costExpertElems = document.querySelectorAll('.cost-expert');
+const costFormElems = document.querySelectorAll('.cost-form');
+
+$(costExpertElems).click(function() {
+    let targetDataId = $(this).attr("data-consultation");
+    $(costExpertElems).removeClass("cost-expert__active");
+    $(this).addClass("cost-expert__active");
+    $(costFormElems).removeClass("cost-form--active");
+    $("#" + targetDataId).addClass("cost-form--active");
 });
