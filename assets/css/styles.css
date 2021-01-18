@@ -456,7 +456,8 @@ body {
 
 .cost-title,
 .stages__title,
-.stages__text {
+.stages__text,
+.advantages__title {
     font-size: 28px;
     color: #292929;
     text-align: left;
@@ -1048,12 +1049,62 @@ body {
     display: block;
 }
 
+.advantages {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
-/* #consultation-1,
-#consultation-2,
-#consultation-3 {
-    display: none;
-} */
+.advantages__title {
+    max-width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advantages .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.advantages__box,
+.advantages__text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.advantages__box {
+    flex: 0 0 25%;
+}
+
+.advantages__containers-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}    
+
+.advantages__containers-box:first-child {
+    margin-bottom: 40px;
+}    
+
+.advantages__text {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.advantages__name {
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 235px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.advantages__descr {
+    font-size: 16px;
+    line-height: 18px;
+}
 
 @media (max-width: 1450px) {
     .swiper-slide__title {
@@ -1353,6 +1404,19 @@ body {
     .cost-form .form__text {
         font-size: 14px;
         line-height: 18px;
+    }
+
+    .advantages__containers-box {
+        flex-wrap: wrap;
+    }
+
+    .advantages__box {
+        flex: 0 0 50%;
+    }
+
+    .advantages__box:first-child,
+    .advantages__box:nth-child(2) {
+        margin-bottom: 40px;
     }
 }
 
@@ -1951,5 +2015,10 @@ body {
 
     .stages .swiper-button-next {
         right: 170px;
+    }
+
+    .advantages__descr {
+        font-size: 14px;
+        line-height: 16px;
     }
 }

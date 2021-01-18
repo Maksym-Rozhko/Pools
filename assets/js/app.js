@@ -13,7 +13,7 @@ $('.swiper-wrap').on('click', '.slide-item', function() {
     const index = $(this).data('index');
     mySwiper.slideTo(index);
 });
-                        
+                       
 const slideItem = document.querySelectorAll('.slide-item');
 const mainSlide = document.querySelectorAll('.swiper-slide');
 const prevBtn = document.querySelector('.swiper-button-prev');
