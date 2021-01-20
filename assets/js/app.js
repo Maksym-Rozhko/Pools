@@ -259,3 +259,59 @@ $(costExpertElems).click(function() {
     $(costFormElems).removeClass("cost-form--active");
     $("#" + targetDataId).addClass("cost-form--active");
 });
+
+// Our-team
+let ourTeamFirstSwiper = new Swiper('.our-team-swiper-container', {
+    spaceBetween: 15,
+    loopFillGroupWithBlank: true,
+    breakpoints: {
+        200: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        },
+        565: {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+        },
+        1250: {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+        },
+    },
+});
+
+let ourTeamSecondSwiper = new Swiper('.our-team-second-swiper', {
+    slidesPerView: 5,
+    spaceBetween: 15,
+    slidesPerGroup: 1,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.team-swiper-btn-next',
+      prevEl: '.team-swiper-btn-prev',
+    },
+    breakpoints: {
+        200: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        },
+        565: {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+        },
+        1250: {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+        },
+    },
+});
+
+ourTeamFirstSwiper.controller.control = ourTeamSecondSwiper;
+ourTeamSecondSwiper.controller.control = ourTeamFirstSwiper;
