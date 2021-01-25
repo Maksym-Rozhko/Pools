@@ -138,17 +138,24 @@ let gallerySwiperBottom = new Swiper('.second-gallery-slider', {
 gallerySwiper.controller.control = gallerySwiperBottom;
 gallerySwiperBottom.controller.control = gallerySwiper;
 
-const modalCont = document.querySelector(".modal__box");
-const modal = document.getElementById("galleryModal");
-const modalBtnClose = document.querySelectorAll(".modal__close");
+const modalWrapper = document.querySelector('.modal__wrapper');
+const modalCont = document.querySelector('.modal__box');
+const modal = document.getElementById('galleryModal');
+const modalBtnClose = document.querySelectorAll('.modal__close');
 const swiperSlidePool = document.querySelectorAll('.swiper-slide-pool');
 const stagesModalConteiner = document.querySelector('#stagesModal');
 const openModalDetailBtns = document.querySelectorAll('.stages-container__btn');
 
 const getSrcImages = (e) => {
-    let target = e.target;
+    let target = e.currentTarget.children[0];
     let imgSrc = target.src;
     modalCont.children[0].children[0].setAttribute('src', imgSrc);
+    
+    imgSrc.includes('team') || imgSrc.includes('consultation') ? modalWrapper.classList.add('our-team__wrapper') : modalWrapper.classList.remove('our-team__wrapper');
+
+    for (btn of gallerySubmBtn) {
+        imgSrc.includes('team') || imgSrc.includes('consultation') ? btn.style.display = 'none' : btn.style.display = 'block';
+    }
 }
 
 for (btn of modalBtnClose) {
