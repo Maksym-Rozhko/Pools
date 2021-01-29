@@ -143,6 +143,7 @@ const modalCont = document.querySelector('.modal__box');
 const modal = document.getElementById('galleryModal');
 const modalBtnClose = document.querySelectorAll('.modal__close');
 const swiperSlidePool = document.querySelectorAll('.swiper-slide-pool');
+const swiperCertificatesImg = document.querySelectorAll('.swiper-slide-certificate');
 const stagesModalConteiner = document.querySelector('#stagesModal');
 const openModalDetailBtns = document.querySelectorAll('.stages-container__btn');
 
@@ -152,26 +153,31 @@ const getSrcImages = (e) => {
     modalCont.children[0].children[0].setAttribute('src', imgSrc);
     
     imgSrc.includes('team') || imgSrc.includes('consultation') ? modalWrapper.classList.add('our-team__wrapper') : modalWrapper.classList.remove('our-team__wrapper');
+    imgSrc.includes('certificates') ? modalWrapper.classList.add('certificates__wrapp') : modalWrapper.classList.remove('certificates__wrapp');
 
     for (btn of gallerySubmBtn) {
-        imgSrc.includes('team') || imgSrc.includes('consultation') ? btn.style.display = 'none' : btn.style.display = 'block';
+        imgSrc.includes('team') || imgSrc.includes('consultation') || imgSrc.includes('certificates') ? btn.style.display = 'none' : btn.style.display = 'block';
     }
 }
+
+function getImgElemsSwiperElems(imgElemsSwiper) {
+    for (item of imgElemsSwiper) {
+        item.addEventListener('click', e => {
+            e.preventDefault();
+            getSrcImages(e);
+            modal.style.display = 'block';
+            document.querySelector('body').style.overflow = 'hidden';
+        });
+    };
+};
+getImgElemsSwiperElems(swiperSlidePool);
+getImgElemsSwiperElems(swiperCertificatesImg);
 
 for (btn of modalBtnClose) {
     btn.addEventListener('click', () => {
         modal.style.display = 'none';
         stagesModalConteiner.style.display = 'none';
         document.querySelector('body').style.overflow = 'visible';
-    });
-}
-
-for (item of swiperSlidePool) {
-    item.addEventListener('click', e => {
-        e.preventDefault();
-        getSrcImages(e);
-        modal.style.display = "block";
-        document.querySelector('body').style.overflow = 'hidden';
     });
 }
 
@@ -322,3 +328,40 @@ let ourTeamSecondSwiper = new Swiper('.our-team-second-swiper', {
 
 ourTeamFirstSwiper.controller.control = ourTeamSecondSwiper;
 ourTeamSecondSwiper.controller.control = ourTeamFirstSwiper;
+
+let teamWorkSwiper = new Swiper('.certificates-swiper-container', {
+    autoplay: {
+        delay: 3000,
+      },
+    slidesPerView: 4,
+    spaceBetween: 15,
+    slidesPerGroup: 1,
+    loopFillGroupWithBlank: true,
+    navigation: {
+        nextEl: '.certificates-btn-next',
+        prevEl: '.certificates-btn-prev',
+      },
+    pagination: {
+        el: '.certificates-swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+    breakpoints: {
+        200: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        },
+        565: {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+        },
+        1250: {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+        },
+    },
+});

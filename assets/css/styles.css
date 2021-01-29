@@ -283,7 +283,8 @@ body {
 .gallery-swiper-container,
 .second-gallery-slider,
 .our-team-swiper-container,
-.our-team-second-swiper {
+.our-team-second-swiper,
+.certificates-swiper-container {
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -345,7 +346,8 @@ body {
     right: -40px;
 }
 
-.swiper-pagination {
+.swiper-pagination,
+.certificates-swiper-pagination {
     position: relative;
     margin-top: 40px;
 }
@@ -462,7 +464,8 @@ body {
 .stages__text,
 .advantages__title,
 .fair-price__title,
-.our-team__title {
+.our-team__title,
+.certificates__title {
     font-size: 28px;
     color: #292929;
     text-align: left;
@@ -823,12 +826,12 @@ body {
     right: 90px;
 }
 
-.stages .modal {
+.modal {
     background-color: rgba(66, 87, 104, .8);
 }
 
 .stages .modal__wrapper {
-    height: 50%;
+    height: 472px;
 }
 
 .stages .modal__box {
@@ -1142,6 +1145,7 @@ body {
 
 .fair-price__subtitle {
     text-transform: lowercase;
+    display: block;
 }
 
 .fair-price__item {
@@ -1284,6 +1288,115 @@ body {
     object-fit: cover;
 }
 
+.beton-price {
+    background-image: url('../images/fair-price/bg-beton-price.jpg');
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.beton-price .fair-price__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    max-width: 300px;
+}
+
+.beton-price .fair-price__text::after,
+.beton-price .fair-price__text::before {
+    content: none;
+}
+
+.beton-price .form {
+    max-width: 500px;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.beton-price .form__action {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.beton-price .fair-price__title {
+    margin-bottom: 40px;
+}
+
+.beton-price .form__input {
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+.beton-price .fair-price__box {
+    width: 500px;
+}
+
+.beton-price .form__text {
+    max-width: 300px;
+    margin-right: auto;
+}
+
+.certificates {
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.certificates-swiper-pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.certificates__title {
+    text-align: center;
+}
+
+.certificates__container {
+    position: relative;
+}
+
+.certificates-btn-prev {
+    left: -70px;
+}
+
+.certificates-btn-next {
+    right: -70px;
+}
+
+.swiper-slide-certificate img {
+    width: 100%;
+}
+
+.swiper-slide-certificate {
+    text-decoration: none;
+}
+
+.certificates__text {
+    font-size: 16px;
+    line-height: 17px;
+    text-align: center;
+    font-weight: 400;
+    margin: 15px 0;
+    padding: 0 10px;
+    color: #292929;
+}
+
+.certificates__wrapp {
+    max-height: inherit;
+    max-width: 480px;
+    height: 700px;
+}
+
+.certificates__wrapp .modal__box {
+    height: 685px;
+}
+
+.certificates__wrapp .modal__img img {
+    height: 685px;
+}
+
+
+
 @media (max-width: 1450px) {
     .swiper-slide__title {
         font-size: 32px;
@@ -1308,6 +1421,14 @@ body {
         left: calc(50% + 200px);
         display: flex;
         flex-direction: column;
+    }
+
+    .certificates-btn-prev {
+        left: -30px;
+    }
+
+    .certificates-btn-next {
+        right: -30px;
     }
 }
 
@@ -1414,6 +1535,11 @@ body {
     .team-swiper-btn-next {
         display: block;
     }
+
+    .certificates-btn-prev,
+    .certificates-btn-next {
+        display: block;
+    }
 }
 
 @media (max-width: 1085px) {
@@ -1513,6 +1639,14 @@ body {
 
     .fair-price__box {
         margin: 0 auto;
+    }
+
+    .beton-price .fair-price__content {
+        align-items: center;
+    }
+
+    .beton-price .fair-price__text {
+        max-width: 400px;
     }
 }
 
@@ -1687,6 +1821,11 @@ body {
 
     .modal__wrapper {
         width: 80%;
+        height: 450px;
+    }
+
+    .certificates__wrapp {
+        height: 700px;
     }
 
     .stages-container__abbr,
@@ -1736,11 +1875,31 @@ body {
     .fair-price__text:first-child::after {
         right: -154px;
     }
+
+    .beton-price .fair-price__title {
+        margin-bottom: 10px;
+    }
+
+    .beton-price .fair-price__text {
+        max-width: 400px;
+    }
 }
 
 @media (max-width: 660px) {
     .stages .modal__close {
         top: -80px;
+    }
+
+    .modal__wrapper {
+        height: 390px;
+    }
+
+    .our-team__wrapper {
+        height: 455px;
+    }
+
+    .certificates__wrapp {
+        height: 700px;
     }
 }
 
@@ -1783,12 +1942,7 @@ body {
         width: 230px;
         margin: 0 auto;
     }
-
-    .modal__close {
-        right: -20px;
-        top: -10px;
-    }
-
+    
     .stages .swiper-button-prev {
         left: 15px;
     }
@@ -1816,8 +1970,28 @@ body {
 }
 
 @media (max-width: 610px) {
+    .modal .stages__lists {
+        display: none;
+    }
+
+    .stages .modal__wrapper {
+        height: 400px;
+    }
+
     .stages .modal__close {
-        top: -110px;
+        top: 20px;
+    }
+
+    .modal__wrapper {
+        height: 350px;
+    }
+
+    .our-team__wrapper {
+        height: 455px;
+    }
+
+    .certificates__wrapp {
+        height: 700px;
     }
 }
     
@@ -1965,6 +2139,18 @@ body {
     .fair-price__text:first-child::after {
         right: -104px;
     }
+
+    .certificates__container {
+        position: inherit;
+    }
+
+    .certificates-btn-prev {
+        left: 0;
+    }
+
+    .certificates-btn-next {
+        right: 0;
+    }
 }
 
 @media (max-width: 565px) {
@@ -2013,11 +2199,50 @@ body {
     .team-swiper-btn-next {
         right: 15px;
     }
+
+    .beton-price .form {
+        padding-left: 20px;
+        max-width: 300px;
+        margin: 0 auto;
+    } 
+
+    .beton-price .fair-price__box {
+        width: 300px;
+    }
+
+    .beton-price .form__action {
+        display: block;
+        text-align: center;
+    }
+
+    .beton-price .form__input {
+        margin-bottom: 15px; 
+        margin-right: 0;
+    }
+
+    .swiper-slide-certificate {
+        text-decoration: none;
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .swiper-slide-certificate img {
+        width: inherit;
+    }
+
+    .certificates-btn-prev {
+        left: 30px;
+    }
+
+    .certificates-btn-next {
+        right: 30px;
+    }
 }
 
 @media (max-width: 530px) {
     .stages .modal__close {
-        top: -150px;
+        top: -20px;
     }
 
     .stages .swiper-button-next {
@@ -2062,12 +2287,7 @@ body {
     .gallery-images-sliders .swiper-button-next {
         right: 10px;
     }
-
-    .modal__close {
-        right: -30px;
-        top: 100px;
-    }
-
+    
     .cost-expert__avatar {
         max-width: 192px;
         max-height: 197px;
@@ -2103,11 +2323,36 @@ body {
     .fair-price__text:first-child::after {
         right: -64px;
     }
+
+    .modal__wrapper {
+        height: 310px;
+    }
+
+    .our-team__wrapper {
+        height: 455px;
+    }
+
+    .modal__img img {
+        min-height: 260px;
+    }
+
+    .certificates__wrapp {
+        height: 450px;
+        max-width: 350px;
+    }
+
+    .certificates__wrapp .modal__box {
+        height: 450px;
+    }
+
+    .certificates__wrapp .modal__img img {
+        height: 450px;
+    }
 }
 
 @media (max-width: 490px) {
     .stages .modal__close {
-        top: -180px;
+        top: -40px;
     }
 
     .stages .swiper-button-next {
@@ -2150,13 +2395,25 @@ body {
     .fair-price__text:last-child {
         max-width: 155px;
     }
+
+    .beton-price .fair-price__text.fair-price__text:last-child {
+        max-width: 300px;
+    }
+
+    .certificates-swiper-pagination {
+        display: none;
+    }
+
+    .certificates-btn-prev {
+        left: 0;
+    }
+
+    .certificates-btn-next {
+        right: 0;
+    }
 }
 
 @media (max-width: 450px) {
-    .stages .modal__close {
-        top: -210px;
-    }
-
     .stages .swiper-button-next {
         right: 290px;
     }
@@ -2205,11 +2462,23 @@ body {
     .consultation #consultation-3::after {
         left: 270px;
     }
+
+    .modal__wrapper {
+        height: 270px;
+    }
+
+    .certificates__wrapp {
+        height: 450px;
+    }
+
+    .our-team__wrapper {
+        height: 455px;
+    }
 }
 
 @media (max-width: 423px) {
     .stages .modal__wrapper {
-        height: 607px;
+        height: 400px;
     }
 
     .stages .modal__box {
@@ -2217,7 +2486,7 @@ body {
     }
 
     .stages .modal__close {
-        top: 20px;
+        top: 10px;
         right: -5px;
     }
 
@@ -2251,6 +2520,15 @@ body {
 
     .modal__wrapper.our-team__wrapper {
         max-height: 355px;
+    }
+
+    .swiper-slide-certificate {
+        width: 200px;
+    }
+
+    .certificates__container .swiper-button-prev, 
+    .certificates__container .swiper-button-next {
+        top: calc(50% - -5%);
     }
 }
 
@@ -2298,13 +2576,13 @@ body {
     .fair-price__text:last-child {
         max-width: 125px;
     }
+
+    .stages .modal__close {
+        top: -10px;
+    }
 }
 
 @media (max-width: 350px) {
-    .stages .modal__close {
-        top: 10px;
-    }
-
     .cost-expert {
         flex-direction: column;
     }
@@ -2319,10 +2597,6 @@ body {
 }
 
 @media (max-width: 345px) {
-    .stages .modal__close {
-        top: -30px;
-    }
-
     .consultation #consultation-2::before {
         left: 110px
     }
@@ -2351,6 +2625,9 @@ body {
     .fair-price .form  {
         padding: 20px;
     }
+    .stages .modal__close {
+        top: -30px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -2369,11 +2646,6 @@ body {
 
     .gallery-images-sliders .swiper-button-next {
         right: -5px;
-    }
-
-    .modal__close {
-        right: -30px;
-        top: 230px;
     }
 
     .cost-expert {
@@ -2399,5 +2671,9 @@ body {
     .advantages__descr {
         font-size: 14px;
         line-height: 16px;
+    }
+
+    .beton-price .form {
+        padding: 20px 10px;
     }
 }
