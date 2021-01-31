@@ -365,3 +365,34 @@ let teamWorkSwiper = new Swiper('.certificates-swiper-container', {
         },
     },
 });
+
+// video-player 
+const videoPlayer = document.querySelectorAll('.video-player');
+const moreVideo = document.querySelector('.video-gallery__more-video');
+
+moreVideo.addEventListener('click', e => e.preventDefault());
+
+$(videoPlayer).click(function() {
+    $(videoPlayer).removeClass('video-player__is-active');
+    $(videoPlayer).removeAttr('controls');
+    $(this).addClass('video-player__is-active');
+    $(this).attr('controls', 'true');  
+});
+
+window.addEventListener('scroll', e => {
+    for(video of videoPlayer) {
+        if (e.target !== video) {
+            video.classList.remove('video-player__is-active');
+            video.removeAttribute('controls');
+        }
+    }
+});
+
+window.addEventListener('click', e => {
+    for(video of videoPlayer) {
+        if (e.target !== video) {
+            video.classList.remove('video-player__is-active');
+            video.removeAttribute('controls');
+        }
+    }
+});  
