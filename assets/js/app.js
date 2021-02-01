@@ -372,27 +372,37 @@ const moreVideo = document.querySelector('.video-gallery__more-video');
 
 moreVideo.addEventListener('click', e => e.preventDefault());
 
-$(videoPlayer).click(function() {
-    $(videoPlayer).removeClass('video-player__is-active');
-    $(videoPlayer).removeAttr('controls');
-    $(this).addClass('video-player__is-active');
-    $(this).attr('controls', 'true');  
-});
+for(video of videoPlayer) {
+    video.addEventListener('click', e => {
+        const dataVideo = e.target.dataset.video;
+        switch(dataVideo) {
+            case '1':
+                e.target.classList.add('video-player__is-active');
+                e.target.setAttribute('controls', 'true');
+                break;
+            case '2':
+                e.target.classList.add('video-player__is-active');
+                e.target.setAttribute('controls', 'true');
+                break;
+            case '3':
+                e.target.classList.add('video-player__is-active');
+                e.target.setAttribute('controls', 'true');
+                break;
+                default:
+                    video.classList.remove('video-player__is-active');
+                    video.removeAttribute('controls');
+        }
+    });
+};
 
-window.addEventListener('scroll', e => {
+getEvent = (e) => {
     for(video of videoPlayer) {
         if (e.target !== video) {
             video.classList.remove('video-player__is-active');
             video.removeAttribute('controls');
         }
     }
-});
+}
 
-window.addEventListener('click', e => {
-    for(video of videoPlayer) {
-        if (e.target !== video) {
-            video.classList.remove('video-player__is-active');
-            video.removeAttribute('controls');
-        }
-    }
-});  
+window.addEventListener('click', e => getEvent(e));
+window.addEventListener('scroll', e => getEvent(e));

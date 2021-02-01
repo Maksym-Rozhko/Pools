@@ -48,14 +48,16 @@ body {
     color: #292929;
 }
 
-.header-inner__block {
+.header-inner__block,
+.footer__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.header-inner__logo {
+.header-inner__logo,
+.footer__logo {
     flex-grow: 1;
 }
 
@@ -466,7 +468,8 @@ body {
 .fair-price__title,
 .our-team__title,
 .certificates__title,
-.video-gallery__title {
+.video-gallery__title,
+.map__title {
     font-size: 28px;
     color: #292929;
     text-align: left;
@@ -1463,6 +1466,94 @@ body {
     transform: scale(2) translateY(-200px) translateX(-50%);
 }
 
+.map {
+    background-image: url('../images/footer/bg-footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 500px;
+    position: relative;
+}
+
+.map__container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 270px;
+    transform: translateX(-50%);
+    max-width: 940px;
+    width: 100%;
+}
+
+.map__iframe {
+    width: 500px; 
+    height: 330px;
+}
+
+.map__content {
+    padding: 45px 40px 20px 40px;
+}
+
+.map__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.map__tel {
+    text-decoration: none;
+    font-weight: 600;
+    color: #292929;
+    font-size: 18px;
+    margin-bottom: 25px;
+    display: block;
+    transition-duration: .4s;
+}
+
+.map__tel:hover {
+    color: #0056b3;
+}
+
+.map__tel:hover .icon {
+    transform: scale(1.5);
+}
+
+.map__address:hover .icon {
+    transform: scale(1.5);
+}
+
+.map__content .icon {
+    width: 20px;
+    height: 15px;
+    transition-duration: .4s;
+}
+
+.map__adress-text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.map__adress-text:last-child {
+    display: block;
+    margin-left: 30px;
+}
+
+.footer {
+    padding-top: 160px;
+    padding-bottom: 60px;
+}
+
+.footer__copyright--name{
+    flex-grow: 3;
+}
+
+.footer__copyright {
+    font-size: 12px;
+    line-height: 18px;
+    color: #292929;
+}
+
 @media (max-width: 1450px) {
     .swiper-slide__title {
         font-size: 32px;
@@ -1740,6 +1831,19 @@ body {
     .beton-price .fair-price__text {
         max-width: 400px;
     }
+
+    .map__container {
+        max-width: 800px;
+    }
+
+    .map__iframe {
+        width: 420px;
+    }
+
+    .map__title {
+        font-size: 22px;
+        line-height: 28px;
+    }
 }
 
 @media (max-width: 890px) {
@@ -1800,12 +1904,43 @@ body {
     .video-player__is-active {
         transform: scale(1.5) translateY(-150px) translateX(0);
     }
+
+    .map {
+        height: inherit;
+    }
+
+    .map .wrapper,
+    .map__img,
+    .map__iframe,
+    .map__content {
+        width: 100%;
+    }
+
+    .map__container {
+        flex-direction: column-reverse;
+        position: inherit;
+        transform: none;
+        max-width: inherit;
+    }
+
+    .map__title {
+        text-align: center;
+    }
+
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
 }
 
 @media (max-width: 768px) {
     .wrapper {
         max-width: 720px;
         width: 80%;
+    }
+
+    .map .wrapper {
+        max-width: inherit;
     }
 
     .swiper-slide__content {
@@ -2070,6 +2205,11 @@ body {
     .our-team__wrapper .modal__close {
         right: -40px;
         top: -40px;
+    }
+
+    .footer__logo {
+        flex: 100%;
+        margin-bottom: 15px;
     }
 }
 
@@ -2589,6 +2729,18 @@ body {
 
     .our-team__wrapper {
         height: 455px;
+    }
+
+    .footer__logo {
+        order: -1;
+    }
+
+    .footer__copyright--name {
+        order: 1;
+    }
+
+    .footer__copyright {
+        max-width: 130px;
     }
 }
 
