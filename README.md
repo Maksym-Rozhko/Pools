@@ -9,7 +9,7 @@
   * - interactive moving sticky header when scrolling; :white_check_mark:
   * - cross-browser compatibility; :white_check_mark:
   * - simple pure JS slider on the main screen; :white_check_mark:
-  * - added responsive pop-ups and modaks; :white_check_mark:
+  * - added responsive pop-ups and modals; :white_check_mark:
   * - added sliders; :white_check_mark:
   
 
